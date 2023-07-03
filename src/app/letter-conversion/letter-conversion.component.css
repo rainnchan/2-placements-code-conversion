@@ -19,7 +19,7 @@ input{
         border: 3px solid #5551ff;
     }
 }
-h1 { 
+h2 { 
     color: #111; 
     font-family: 'Helvetica Neue', sans-serif; 
     font-size: 40px; 
@@ -27,4 +27,64 @@ h1 {
     letter-spacing: -1px; 
     line-height: 1; 
     text-align: center; 
+    padding: 1em;
 }
+.container {
+    position: relative; 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; 
+    background-color: #f0f0f0;
+    opacity: 0.8;
+    border: 1px solid #ccc;
+    border-radius: 3em;
+    top: 250px; 
+  }
+  .textbox {
+    width: 600px;
+    height: 150px; 
+    resize: vertical; 
+    overflow-y: scroll; 
+    background-color: #000;
+    color: white;
+    font-size: 2em;
+    justify-content: center;
+    margin-left: 7em;
+  }
+  button{
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  background: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding: 12px 20px;
+  text-align:center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  margin-left: 20em;
+  margin-top: 5px;
+}
+  button:hover{
+      color: #000;
+      background: rgb(255, 218, 87);
+  }
+  p{
+    font-size: 2em;
+    font-family: 'Helvetica Neue', sans-serif; 
+    text-align: center; 
+    padding-top: 20px;
+    font-weight: bold; 
+  }
+  
+  
+  
+  
+  
+  
