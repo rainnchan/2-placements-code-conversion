@@ -7,13 +7,15 @@ import { ProjectComponent } from './project/project.component';
 import { LetterConversionComponent } from './letter-conversion/letter-conversion.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TranslationComponent } from './translation/translation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectComponent,
     LetterConversionComponent,
-    NavbarComponent
+    NavbarComponent,
+    TranslationComponent
   ],
   imports: [
     BrowserModule,
