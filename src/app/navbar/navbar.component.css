@@ -37,7 +37,7 @@ h2 {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-  background-color: black;
+  background-color: rgb(205, 205, 205);
 }
 
 .grad-bar {
@@ -337,11 +337,12 @@ input {
   
 }
 h3{
-  background: linear-gradient(to right, #f32170,#ff6b08, #cf23cf, #eedd44);
+  background: linear-gradient(to right, #fe5895,#ff6b08, #cf23cf, #a75400);
 -webkit-text-fill-color: transparent;
 -webkit-background-clip: text;
-  font-family: Consolas;
+  font-family: Showcard Gothic;
   font-size: 2em;
   font-weight: bold;
   padding-left: 1em;
+  letter-spacing: 3px;
 }

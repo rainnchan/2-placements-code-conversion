@@ -22,7 +22,12 @@ export class LetterConversionComponent implements OnInit {
     'U': '55', 'V': '27', 'W': '45', 'X': '49', 'Y': '21',
     'Z': '66', ' ': '!!' , '0': 'AC', '1': 'BC', '2': 'DC',
     '3': 'EC', '4': 'FC', '5': 'GC', '6': 'HC', '7': 'IC',
-    '8': 'JC', '9': 'KC', 
+    '8': 'JC', '9': 'KC', 'a': '1-', 'b': '2-', 'c': '3-', 'd': '4-', 'e': '5-',
+    'f': '6-', 'g': '7-', 'h': '8-', 'i': '9-', 'j': '0-',
+    'k': '-1', 'l': '-2', 'm': '-3', 'n': '-4', 'o': '-5',
+    'p': '-6', 'q': '-7', 'r': '-8', 's': '-9', '-0': '+1',
+    'u': '+2', 'v': '+3', 'w': '+4', 'x': '+5', 'y': '+6',
+    'z': '+7'
   };
   
   letterConversionReverseMap: Record<string, string> = {
@@ -33,7 +38,12 @@ export class LetterConversionComponent implements OnInit {
     '55': 'U', '27': 'V', '45': 'W', '49': 'X', '21': 'Y',
     '66': 'Z', '!!': ' ' , 'AC': '0', 'BC': '1', 'DC': '2',
     'EC': '3', 'FC': '4', 'GC': '5', 'HC': '6', 'IC': '7',
-    'JC': '8', 'KC': '9'
+    'JC': '8', 'KC': '9','1-': 'a', '2-': 'b', '3-': 'c', '4-': 'd', '5-': 'e',
+    '6-': 'f', '7-': 'g', '8-': 'h', '9-': 'i', '0-': 'j',
+    '-1': 'k', '-2': 'l', '-3': 'm', '-4': 'n', '-5': 'o',
+    '-6': 'p', '-7': 'q', '-8': 'r', '-9': 's', '+1': '-0',
+    '+2': 'u', '+3': 'v', '+4': 'w', '+5': 'x', '+6': 'y',
+    '+7': 'z'
   }
 
 
@@ -57,18 +67,15 @@ export class LetterConversionComponent implements OnInit {
 
 backText= ""
    convertback() {
-    this.backText = '';
-    let result = "";
-    for (let i = 0; i < this.inputText.length; i+= 2) {
-      result = this.inputText.substr(i, 2);
-      const character = result.substr(i, 2);
-       const convertedCharacter = this.letterConversionReverseMap[result];
-       if (convertedCharacter) {
-         this.convertedText += convertedCharacter;
-       } else {
-         this.convertedText += character;
-       }
-     
+    this.convertedText = '';
+    for (let i = 0; i < this.inputText.length; i++) {
+      const character = this.inputText[i];
+      const convertedCharacter = this.letterConversionMap[character];
+      if (convertedCharacter) {
+        this.convertedText += convertedCharacter;
+      } else {
+        this.convertedText += character;
+      }
     }
 
   }

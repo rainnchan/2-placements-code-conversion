@@ -4,7 +4,10 @@
     <img src= "https://i.pinimg.com/564x/f1/d8/ff/f1d8ffa22308cd1d69f60e52ed9bacd5.jpg">
     <h2>Enter your text here  </h2>
     <textarea class="textbox" [(ngModel)]="inputText" placeholder="Enter text"></textarea><br>
-    <button (click)="convertText()" type="submit">Convert</button>   
+    <div class="duh">
+    <button (click)="convertback()" >Encrypt</button>     
+    <button (click)="convertText()" >Dencrypt</button>    
+    </div>
     <p>Converted Text: <br> {{ convertedText }}</p>
 </div>
   </div>
